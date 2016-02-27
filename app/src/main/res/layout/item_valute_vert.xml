@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?><!--<layout xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:app="http://schemas.android.com/apk/res-auto"--><!--xmlns:tools="http://schemas.android.com/tools">-->
+
+<!--<data>-->
+
+<!--<variable--><!--name="valute"--><!--type="ru.asaper.calendarpluscb.network.models.Valute" />--><!--</data>-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/item_padding_vertical"
+    android:paddingEnd="@dimen/item_padding_horizontal"
+    android:paddingStart="@dimen/item_padding_horizontal"
+    android:paddingTop="@dimen/item_padding_vertical">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:text="Доллар США" />
+    <!--android:text="@{valute.name}"-->
+
+    <TextView
+        android:id="@+id/tvValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:text="1USD=68.12" />
+    <!--android:text="@{valute.nominal + valut.charCode + '=' + valute.value.d}"-->
+
+</LinearLayout><!--</layout>-->

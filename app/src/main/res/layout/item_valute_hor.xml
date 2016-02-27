@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="valute"
+            type="ru.asaper.calendarpluscb.network.models.Valute" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/item_padding_vertical"
+        android:paddingEnd="@dimen/item_padding_horizontal"
+        android:paddingStart="@dimen/item_padding_horizontal"
+        android:paddingTop="@dimen/item_padding_vertical">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="@{valute.name + '(' + valute.charCode + ')'}"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            tools:text="Доллар США(USD)" />
+
+        <TextView
+            android:id="@+id/tvValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@{String.valueOf(valute.value.d)}"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            tools:text="123,45" />
+    </LinearLayout>
+</layout>
